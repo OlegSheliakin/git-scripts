@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Find which is your current branch
+if currentBranch=$(git symbolic-ref --short -q HEAD)
+then
+  echo On branch $currentBranch
+  echo Add all changes to last commit
+
+  # Stage all changes
+  git add .
+
+  git commit --amend --no-edit
+
+  echo Successfully added all changes to last commit!
+else
+  echo ERROR: Cannot find the current branch!
+fi#!/bin/sh
+
+# Find which is your current branch
+if currentBranch=$(git symbolic-ref --short -q HEAD)
+then
+  echo On branch $currentBranch
+  echo Add all changes to last commit
+
+  # Stage all changes
+  git add .
+
+  git commit --amend --no-edit
+
+  echo Successfully added all changes to last commit!
+else
+  echo ERROR: Cannot find the current branch!
+fi
